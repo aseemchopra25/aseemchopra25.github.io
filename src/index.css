@@ -29,3 +29,21 @@ code {
     padding-right: 0.5rem;
   }
 }
+
+nav {
+  background-color: rgb(255, 255, 255); /* Dark background for the nav bar */
+  color: rgb(0, 0, 0);
+}
+
+nav a {
+  color: rgb(0, 0, 0); /* Links color */
+  text-decoration: none; /* No underlines for links */
+  margin-right: 1rem; /* Spacing between links */
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: rgb(125, 125, 125); /* Links color on hover */
+}
+/* 
+Taking inspiration of color pallette and minimalism from paco.me */

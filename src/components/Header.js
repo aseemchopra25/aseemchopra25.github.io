@@ -1,6 +1,4 @@
-import React, { useEffect, useRef } from "react";
 import { YinYang } from "./AllSvgs";
-import styled, { ThemeProvider } from "styled-components";
 
 function Header() {
     return (

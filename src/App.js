@@ -11,6 +11,8 @@ import Layout from './components/Layout';
 
 function App() {
   return (
+
+    // Add layout for universal CSS using index.css 
     <Layout>
     <Router>
       {/* Header Component */}
