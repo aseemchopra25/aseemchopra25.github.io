@@ -7,12 +7,16 @@ import GitHub from './pages/GitHub';
 import Blog from './pages/Blog';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Layout from './components/Layout';
 
 function App() {
   return (
+    <Layout>
     <Router>
+      {/* Header Component */}
       <Header />
-      <Navbar />
+      {/* Navigation Bar  */}
+      <Navbar /> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-me" element={<AboutMe />} />
@@ -20,8 +24,10 @@ function App() {
         <Route path="/github" element={<GitHub />} />
         <Route path="/blog" element={<Blog />} />
       </Routes>
+      {/* Footer Component  */}
       <Footer />
     </Router>
+    </Layout>
   );
 }
 
