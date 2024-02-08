@@ -18,7 +18,7 @@ function App() {
       {/* Header Component */}
       <Header />
       {/* Navigation Bar  */}
-      <Navbar /> 
+      {/* <Navbar />  */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-me" element={<AboutMe />} />
@@ -27,7 +27,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
       </Routes>
       {/* Footer Component  */}
-      <Footer />
+      {/* <Footer /> */}
     </Router>
     </Layout>
   );

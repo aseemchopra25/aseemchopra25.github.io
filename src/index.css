@@ -6,6 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a1a;
+  color: #f2f2f2;
 }
 
 code {
@@ -14,11 +16,15 @@ code {
 }
 
 .main-content {
-  margin-left: 20%;
-  margin-right: 20%;
-  max-width: 1000px; 
+  margin-top: 15%;
+  margin-left: 9%;
+  margin-right: 9%;
+  max-width: 1200px; 
   padding-left: 1rem;
   padding-right: 1rem;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 @media (max-width: 768px) {
@@ -30,20 +36,21 @@ code {
   }
 }
 
-nav {
-  background-color: rgb(255, 255, 255); /* Dark background for the nav bar */
-  color: rgb(0, 0, 0);
+a {
+  color: inherit; /* Use the same color as the parent text */
+  text-decoration: underline; /* Enable underline */
+  text-decoration-color: #747373; /* Set underline to faint grey */
+  text-decoration-thickness: 1px; /* Adjust thickness of the underline (optional) */
+  textUnderlineOffset: 3px; /* Offset from the text (optional) */
 }
 
-nav a {
-  color: rgb(0, 0, 0); /* Links color */
-  text-decoration: none; /* No underlines for links */
-  margin-right: 1rem; /* Spacing between links */
-  font-weight: bold;
+a:hover {
+  text-decoration-color: white; /* Underline color on hover */
 }
 
-nav a:hover {
-  color: rgb(125, 125, 125); /* Links color on hover */
-}
-/* 
-Taking inspiration of color pallette and minimalism from paco.me */
+
+
+/* Taking inspiration of color pallette and minimalism from paco.me */
+/* background 1a1a1a */
+/* text color f2f2f2 */
+/* unfocused text 707070 */
