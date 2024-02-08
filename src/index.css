@@ -27,29 +27,62 @@ code {
   /* align-items: center; */
 }
 
-@media (max-width: 768px) {
-  .main-content {
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
+
 
 a {
   color: inherit; /* Use the same color as the parent text */
   text-decoration: underline; /* Enable underline */
   text-decoration-color: #747373; /* Set underline to faint grey */
   text-decoration-thickness: 1px; /* Adjust thickness of the underline (optional) */
-  textUnderlineOffset: 3px; /* Offset from the text (optional) */
 }
 
 a:hover {
   text-decoration-color: white; /* Underline color on hover */
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates three columns with equal width */
+  gap: 50px; /* Adjust the gap between columns */
+}
+
+.grid-item {
+  /* Styling for the grid items */
+  color: white; /* Example text color, adjust as needed */
+  font-family: 'Your font', sans-serif; /* Replace with your chosen font */
+}
+
+.unfocused {
+  color: #707070;
+}
+
+.unfocused-column-name {
+  color: #707070;
+  font-size:medium;
+  margin-bottom: 30px;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 0;
+  transform: rotate(45deg); /* Rotates the arrow to point right */
+  color: #707070;
+}
 
 
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    
+  }
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack the columns on top of each other on smaller screens */
+  }
+}
 /* Taking inspiration of color pallette and minimalism from paco.me */
 /* background 1a1a1a */
 /* text color f2f2f2 */
