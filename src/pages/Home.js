@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from 'react-router-dom';
 function Home() {
     return (
       <div>
@@ -18,7 +20,7 @@ function Home() {
             <p className="unfocused">Simple, efficient React state hook in 50 lines.</p>
             <p>Redesign 2021</p>
             <p className="unfocused">Return to simplicity.</p> */}
-            <p>All writing</p>
+            <Link to="/blog">All Writing</Link>
             <p className="unfocused">Infrequent thoughts on design and code.</p>
           </div>
         </div>
@@ -26,7 +28,7 @@ function Home() {
         <p>Now</p>
         <br/>
         <p>All I want to do is to build secure architecture and break it down. I want to focus on simplicity and minimalism in design. Frictionless user experience is the name of the game. </p>
-        <p>Doing boulder problems and beatboxing in my free time</p>
+        <p>Doing boulder problems and beatboxing in my free time.</p>
         <br/>
         <br/>
         <p>Connect</p>
