@@ -31,7 +31,7 @@ code {
 }
 
 .main-content {
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: 9%;
   margin-right: 9%;
   max-width: 1200px; 
@@ -54,7 +54,7 @@ code {
   background-color: rgba(26, 26, 26, 0.1); /* Translucent background */
   backdrop-filter: blur(1px); /* Optional blur effect */
   z-index: 10; /* Higher than the content to ensure it's on top */
-  padding: 20px 20px;
+  padding: 25px 20px;
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  */
   width: 100%;
   overflow: hidden;
