@@ -15,6 +15,17 @@ code {
     monospace;
 }
 
+@keyframes fadeInTopDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Start from slightly above */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .main-content {
   margin-top: 15%;
   margin-left: 9%;
@@ -25,7 +36,14 @@ code {
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
+  opacity: 0; /* Start invisible */
+  animation-name: fadeInTopDown;
+  animation-fill-mode: forwards; /* Keep the state at the end of the animation */
+  /* Customize these as needed */
+  animation-duration: 4s; /* How long the animation takes */
+  animation-delay: 0s; /* Delay before the animation starts */
 }
+
 p {
   line-height: 1.7;
 }
