@@ -22,9 +22,16 @@ function Home() {
             <p className="unfocused">Infrequent thoughts on design and code.</p>
           </div>
         </div>
+        <br/>
+        <p>Now</p>
+        <br/>
+        <p>All I want to do is to build secure architecture and break it down. I want to focus on simplicity and minimalism in design. Frictionless user experience is the name of the game. </p>
+        <p>Doing boulder problems and beatboxing in my free time</p>
+        <br/>
+        <br/>
+        <p>Connect</p>
+        <p>Reach me at <a href="mailto:aseemchopra@protonmail.com">aseemchopra@protonmail</a></p>
       </div>    
-      
-      
     );
   }
   

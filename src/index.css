@@ -26,7 +26,9 @@ code {
   /* justify-content: center; */
   /* align-items: center; */
 }
-
+p {
+  line-height: 1.7;
+}
 
 
 a {
@@ -43,7 +45,7 @@ a:hover {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Creates three columns with equal width */
-  gap: 50px; /* Adjust the gap between columns */
+  gap: 20px; /* Adjust the gap between columns */
 }
 
 .grid-item {
