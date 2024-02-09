@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -42,6 +46,30 @@ code {
   /* Customize these as needed */
   animation-duration: 4s; /* How long the animation takes */
   animation-delay: 0s; /* Delay before the animation starts */
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(26, 26, 26, 0.1); /* Translucent background */
+  backdrop-filter: blur(1px); /* Optional blur effect */
+  z-index: 10; /* Higher than the content to ensure it's on top */
+  padding: 20px 20px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  */
+  width: 100%;
+  overflow: hidden;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100px; /* Height of the gradient effect */
+  background: linear-gradient(to bottom, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 0.3) 100%);
+  pointer-events: none; /* Ensures clicks pass through to elements below */
+  backdrop-filter: blur(10px); /* Stronger blur effect */
 }
 
 p {
