@@ -6,7 +6,7 @@
       "excerpt": "A deep dive into how to determine the default font size used by web browsers."
     },
     {
-      "slug": "safari-favicon-showing-white-background-on-dark-mode",
+      "slug": "second-example-post",
       "title": "Safari favicon showing white background on dark mode",
       "date": "2023-04-19",
       "excerpt": "Fixing the common issue where favicons have a white background in Safari's dark mode."
