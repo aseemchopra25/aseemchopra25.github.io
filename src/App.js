@@ -8,6 +8,9 @@ import Blog from './pages/Blog';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Layout from './components/Layout';
+import BlogPost from './components/BlogPost';
+
+
 function App() {
   return (
 
@@ -24,6 +27,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/github" element={<GitHub />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
       {/* Footer Component  */}
       {/* <Footer /> */}

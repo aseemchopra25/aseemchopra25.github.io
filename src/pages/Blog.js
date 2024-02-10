@@ -1,17 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import posts from './posts.json'; // Assuming you have a JSON file with your posts' metadata
 
 const Blog = () => {
-  const [post, setPost] = useState('');
-
-  useEffect(() => {
-    fetch('/markdowns/example-post.md')
-      .then((response) => response.text())
-      .then((text) => setPost(text));
-  }, []);
-
-  return <ReactMarkdown children={post} remarkPlugins={[remarkGfm]} />;
+  return (
+    <div>
+      <h1>Index</h1>
+      <section>
+        {posts.map(post => (
+          <article key={post.slug}>
+            <Link to={`/blog/${post.slug}`}>
+              <h2>{post.title}</h2>
+              <p>{post.date}</p>
+            </Link>
+          </article>
+        ))}
+      </section>
+    </div>
+  );
 };
 
 export default Blog;
