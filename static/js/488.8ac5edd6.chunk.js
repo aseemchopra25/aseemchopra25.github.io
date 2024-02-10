@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkaseemchopra_io=self.webpackChunkaseemchopra_io||[]).push([[488],{488:(e,a,s)=>{e.exports=s.p+"static/media/second-example-post.0a785bce64437ebaac2d.md"}}]);
