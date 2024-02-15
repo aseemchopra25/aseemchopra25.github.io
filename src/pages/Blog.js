@@ -9,7 +9,6 @@ const BlogList = () => {
       <p><br/>Writing</p>
       {posts.map(post => (
         <div key={post.slug} className="post-entry">
-          <div className="post-year">{post.date.split('-')[0]}</div>
           <Link to={`/blog/${post.slug}`} className="post-link">
             <div className="post-title">{post.title}</div>
             <div className="post-date">{post.date}</div>
