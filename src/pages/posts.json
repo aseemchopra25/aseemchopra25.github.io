@@ -1,14 +1,7 @@
 [
     {
-      "slug": "example-post",
-      "title": "example-post",
-      "date": "2023-09-05",
-      "excerpt": "example-post"
-    },
-    {
-      "slug": "second-example-post",
-      "title": "second-example-post",
-      "date": "2023-04-19",
-      "excerpt": "second-example-post"
+      "slug": "whoami",
+      "title": "whoami",
+      "date": "2024-02-15"
     }
   ]

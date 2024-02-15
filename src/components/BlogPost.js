@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -19,7 +19,12 @@ const BlogPost = () => {
       .catch(err => console.error(err));
   }, [slug]);
 
-  return <ReactMarkdown children={postContent} remarkPlugins={[remarkGfm]} />;
+  return (
+  <>
+  <Link to="/blog"><span className="arrow2">↑</span><em>Writing</em></Link>
+  <ReactMarkdown children={postContent} remarkPlugins={[remarkGfm]} />
+  </>
+  )
 
 };
 
