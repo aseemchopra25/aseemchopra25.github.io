@@ -21,7 +21,7 @@ function Home() {
             <p>Redesign 2021</p>
             <p className="unfocused">Return to simplicity.</p> */}
             <Link to="/blog">All Writing</Link>
-            <p className="unfocused">Infrequent thoughts on design and code.</p>
+            <p className="unfocused">Infrequent thoughts on security and code.</p>
           </div>
         </div>
         <br/>
