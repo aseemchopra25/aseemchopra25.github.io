@@ -9,14 +9,14 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Layout from './components/Layout';
 import BlogPost from './components/BlogPost';
-
+import Shagun from './pages/Shagun';
 
 function App() {
   return (
 
     // Add layout for universal CSS using index.css 
-    <Layout>
     <Router>
+      <Layout>
       {/* Header Component */}
       <Header />
       {/* Navigation Bar  */}
@@ -28,11 +28,12 @@ function App() {
         <Route path="/github" element={<GitHub />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/shagun" element={<Shagun />} />
       </Routes>
       {/* Footer Component  */}
       {/* <Footer /> */}
-    </Router>
     </Layout>
+    </Router>
   );
 }
 
