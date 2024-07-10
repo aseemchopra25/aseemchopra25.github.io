@@ -13,6 +13,7 @@ function Home() {
             <p className="unfocused">Simple implementation of TLS 1.3 from scratch in Golang</p>
             <a href="https://github.com/aseemchopra25/react-earth" target="_blank" rel="noopener noreferrer">React-Earth <span className="arrow">↑</span></a>
             <p className="unfocused">3D earth using ReactJS, ThreeJS and React-Three-Fiber</p>
+            <Link to="/shagun">Shaggy 🐬</Link>
           </div>
           <div class="grid-item">
             <p className="unfocused-column-name">Writing</p>
@@ -27,7 +28,7 @@ function Home() {
         <br/>
         <p>Now</p>
         <br/>
-        <p>All I want to do is to build secure architecture and break it down. I want to focus on simplicity and minimalism in design. Frictionless user experience is the name of the game. </p>
+        <p>Everyday I want to build secure architecture and break it down. I want to focus on simplicity and minimalism in design. Frictionless user experience is the name of the game. </p>
         <p>Doing boulder problems and beatboxing in my free time.</p>
         <br/>
         <br/>

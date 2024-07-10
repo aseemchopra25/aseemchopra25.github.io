@@ -1,6 +1,6 @@
 {
   "name": "aseemchopra.io",
-  "homepage": "https://aseemchopra25.github,io",
+  "homepage": "https://aseemchopra.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,7 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build && cp CNAME build/CNAME",
+    "predeploy": "npm run build && cp CNAME build/CNAME && cp public/404.html build/404.html",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",

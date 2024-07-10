@@ -1,5 +1,5 @@
 import React, { Suspense, useRef } from 'react';
-import { Canvas, useLoader } from '@react-three/fiber';
+import { Canvas, useLoader, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { useDrag } from '@use-gesture/react';
@@ -14,9 +14,16 @@ const DraggableDolphin = () => {
     setPosition([x / 100, -y / 100, 0]);
   });
 
+  // Rotate the dolphin continuously
+  useFrame(() => {
+    if (ref.current) {
+      ref.current.rotation.z += 0.01;
+    }
+  });
+
   return (
-    <mesh ref={ref} position={position} {...bind()}>
-      <primitive object={obj} scale={0.2} /> {/* Smaller scale */}
+    <mesh ref={ref} position={position} {...bind()} rotation={[200,0,0]}>
+      <primitive object={obj} scale={0.01} /> {/* Smaller scale */}
     </mesh>
   );
 };
