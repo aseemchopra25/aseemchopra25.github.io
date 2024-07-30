@@ -1,48 +1,40 @@
-import React, { Suspense, useRef } from 'react';
-import { Canvas, useLoader, useFrame } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
-import { useDrag } from '@use-gesture/react';
-import styles from '../pages/Shagun.module.css';
+import React, { useState } from 'react';
+import Confetti from 'react-confetti';
 
-const DraggableDolphin = () => {
-  const obj = useLoader(OBJLoader, '/dolphin.obj'); // Path to your OBJ model
-  const ref = useRef();
-  const [position, setPosition] = React.useState([0, 0, 0]);
+const LoginPanel = () => {
+  const [showHint, setShowHint] = useState(false);
+  const [inputValue, setInputValue] = useState('');
+  const [showFireworks, setShowFireworks] = useState(false);
 
-  const bind = useDrag(({ offset: [x, y] }) => {
-    setPosition([x / 100, -y / 100, 0]);
-  });
+  const handleHintClick = () => {
+    setShowHint(true);
+  };
 
-  // Rotate the dolphin continuously
-  useFrame(() => {
-    if (ref.current) {
-      ref.current.rotation.z += 0.01;
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+    if (event.target.value.toLowerCase() === 'yes') {
+      setShowFireworks(true);
+    } else {
+      setShowFireworks(false);
     }
-  });
+  };
 
   return (
-    <mesh ref={ref} position={position} {...bind()} rotation={[200,0,0]}>
-      <primitive object={obj} scale={0.01} /> {/* Smaller scale */}
-    </mesh>
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <button onClick={handleHintClick}>Password Hint</button>
+      <div style={{ marginTop: '20px' }}>
+        {showHint && <p>Hint: will you marry me?</p>}
+        <input
+          type="text"
+          placeholder="Password"
+          value={inputValue}
+          onChange={handleInputChange}
+          style={{ marginTop: '10px' }}
+        />
+      </div>
+      {showFireworks && <Confetti />}
+    </div>
   );
 };
 
-const DolphinScene = () => {
-  return (
-    <Canvas
-      camera={{ position: [0, 0, 5], fov: 50 }}
-      className={styles.shagunCanvas}
-    >
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[10, 10, 5]} intensity={1} />
-      <directionalLight position={[-10, -10, -5]} intensity={0.5} />
-      <Suspense fallback={null}>
-        <DraggableDolphin />
-      </Suspense>
-      <OrbitControls />
-    </Canvas>
-  );
-};
-
-export default DolphinScene;
+export default LoginPanel;
