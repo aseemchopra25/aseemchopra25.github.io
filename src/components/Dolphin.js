@@ -20,21 +20,55 @@ const LoginPanel = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <button onClick={handleHintClick}>Password Hint</button>
-      <div style={{ marginTop: '20px' }}>
-        {showHint && <p>Hint: will you marry me?</p>}
-        <input
-          type="text"
-          placeholder="Password"
-          value={inputValue}
-          onChange={handleInputChange}
-          style={{ marginTop: '10px' }}
-        />
+    <div style={styles.container}>
+      <div style={styles.panel}>
+        <button onClick={handleHintClick}>Hint</button>
+        <div style={{ marginTop: '20px' }}>
+          {showHint && <p style={styles.hintText}>Shaggy 🐬, will you marry me?</p>}
+          <input
+            type="text"
+            placeholder="Password"
+            value={inputValue}
+            onChange={handleInputChange}
+            style={styles.input}
+          />
+        </div>
+        {showFireworks && <Confetti />}
       </div>
-      {showFireworks && <Confetti />}
     </div>
   );
+};
+
+const styles = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+  },
+  panel: {
+    textAlign: 'center',
+    padding: '20px',
+    borderRadius: '10px',
+    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+    backgroundColor: '#fff',
+    color: '#000', // Ensuring text color is visible
+  },
+  hintText: {
+    color: '#000',
+    fontSize: '16px',
+    fontWeight: '500',
+  },
+  input: {
+    marginTop: '10px',
+    padding: '10px',
+    width: '100%',
+    maxWidth: '300px',
+    border: '1px solid #ccc',
+    borderRadius: '5px',
+    boxSizing: 'border-box',
+    color: '#000', // Ensuring text color is visible
+  },
 };
 
 export default LoginPanel;
