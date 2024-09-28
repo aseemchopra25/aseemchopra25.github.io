@@ -12,7 +12,7 @@ const LoginPanel = () => {
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-    if (event.target.value.toLowerCase() === 'yes') {
+    if (event.target.value.toLowerCase() === 'hi') {
       setShowFireworks(true);
     } else {
       setShowFireworks(false);
@@ -24,7 +24,7 @@ const LoginPanel = () => {
       <div style={styles.panel}>
         <button onClick={handleHintClick}>Hint</button>
         <div style={{ marginTop: '20px' }}>
-          {showHint && <p style={styles.hintText}>Shaggy 🐬, will you marry me?</p>}
+          {showHint && <p style={styles.hintText}>Shaggy 🐬, Hi</p>}
           <input
             type="text"
             placeholder="Password"
